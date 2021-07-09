@@ -1,0 +1,316 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+  color: black;
+  font-family:'Neucha';
+}
+a{
+  text-decoration: none;
+  color:	#008B8B;
+  -webkit-transition: all .3s ease;
+  -o-transition: all.3s ease;
+  transition: all .3s ease;
+}
+a:hover{
+  color: indigo;
+}
+
+/* inicio del menu*/
+header .menu-etnia{
+  background: #f2f2f2;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5.875rem;
+  border-bottom: 1px solid #eaeaea;
+  font-family: 'Amatic Sc';
+  
+}
+header .menu-etnia .logo {
+  max-width: 3.125rem;
+}
+header .menu-etnia .menu-principal a {
+  padding: 60px;
+  font-size: 20px;
+}
+
+.main{
+  margin-top: 5.875rem;
+
+}
+/*fin de
+
+/*Inicio de portada*/
+#particles-js{
+  height:200px ;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+.main .portada{
+  text-align: center;
+  background-color:#191970 ; 
+  width: 100%;
+  height: 400px;
+  z-index: 99;
+  position: relative;
+}
+.main .portada h1{
+ top: 20px;
+ padding: 40px 0;
+ width: 100%;
+ font-size: 5rem;
+ color:#FFA500 ;
+ text-transform: uppercase;
+ 
+}
+
+.main .portada h2{
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Amatic Sc';
+
+  
+}
+/*fin de la portada*/
+
+
+/*Presentación*/
+.main .intro {
+  padding: 5.625rem 0;
+  background-color: #f2f2f2;
+ 
+}
+
+.main .intro .container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.main .intro .container .col.izq{
+  width: 30%;
+  border-right: 1px solid #1E90FF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-left: 9%;
+  font-family: 'Amatic Sc';
+  font-size: 28px;
+  color: #191970;
+  
+}
+.main .intro .container .col.der{
+  width: 70%;
+  padding-left: 5%;
+  align-items: center;
+  text-align: center;
+  
+  
+}
+/*fin de la presentación*/
+
+
+/*Segundo intro*/
+.main .intro2 .container2 {
+  width: 100%;
+  height: 400px;
+  background-color:#f2f2f2 ;
+  position: relative;
+  background-attachment: fixed;
+
+}
+.main .intro2 .container2 .wave{
+  position: absolute;
+  bottom: 0;
+  width: 120%;
+  animation: w1 2s linear infinite;
+}
+
+@keyframes w1{
+  0%{
+    margin-left: 0;
+  }
+  100%{
+    margin-left: -220px;
+  }
+}
+
+
+.main .intro2 .container2  .col.left{
+  font-family: 'Amatic Sc';
+  font-size: 28px;
+  text-align: center;
+  top: 20px;
+  padding: 40px 0;
+  width: 100%;
+  color: 	#191970;
+}
+.main .intro2 .container2  .col.right{
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 35px;
+  margin: 35px;
+}
+/*Fin del intro 2*/
+
+/*inicio de banner*/
+.main .banner .titulo{
+  font-family: 'Amatic Sc';
+  font-size: 28px;
+  text-align: center;
+  color: #008B8B;
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+/*Inicio del libro*/
+.libro{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background-color: #f2f2f2;
+  }
+.libro > .book{
+  
+  position: relative;
+  width: 600px;
+  height: 400px;
+  transition: transform 0.5s;
+  
+}
+
+.paper{
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+
+.front, .back{
+ background-color: white;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ transform-origin: left;
+ transition: transform 0.5s;
+}
+
+.front{
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid powderblue;
+}
+.back{
+  z-index: 0;
+}
+
+.front-content, .back-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-content{
+  transform: rotateY(180deg);
+}
+
+
+/*paper efect*/
+.flipped .front,
+ .flipped .back{
+  transform: rotateY(-180deg);
+}
+/*control buttons*/
+button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:hover i{
+  color: #636363;;
+}
+i{
+  font-size: 50px;
+  color: gray;
+}
+
+/*paper stack order */
+#p1{
+  z-index: 6;
+}
+#p2{
+  z-index: 5;
+}
+#p3{
+  z-index: 4;
+}
+#p4{
+  z-index: 3;
+}
+#p5{
+  z-index: 2;
+}
+#p6{
+  z-index: 1;
+}
+/*finish book*/
+
+.main .Banner-comment{
+  font-family: 'Amatic Sc';
+  font-size: 28px;
+  text-align: center;
+  color: #008B8B;
+  padding: 40px;
+}
+.main .text-comment{
+  height: 300px;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  
+}
+.main .final .imagen-final img{
+  min-height: 5.875rem; 
+  width: 100%;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
